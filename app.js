@@ -1,9 +1,10 @@
 alert("Bem vindo ao jogo do número secreto!");
 let numeroSecreto = 5;
+console.log(numeroSecreto);
 let palpite = prompt("Entre com um número entre 1 e 10");
 
 if (palpite == numeroSecreto) {
-  alert("Você acertou!");
+  alert("Parabéns! Você acerto o número secreto! (5)");
 } else {
-  alert("Você errou! :(");
+  alert("Que pena... Você errou... :(");
 }
