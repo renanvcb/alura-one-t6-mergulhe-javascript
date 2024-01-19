@@ -1,12 +1,12 @@
 alert("Bem vindo ao jogo do número secreto!");
-let numeroSecreto = 5;
+const numeroMaximo = 100;
+let numeroSecreto = parseInt(Math.random() * numeroMaximo + 1);
 console.log(numeroSecreto);
 let palpite;
 let tentativas = 1;
 
 while (palpite != numeroSecreto) {
-  console.log(Math.random());
-  palpite = prompt("Entre com um número entre 1 e 10");
+  palpite = prompt(`Entre com um número entre 1 e ${numeroMaximo}`);
   if (palpite == numeroSecreto) {
     break;
   } else {
