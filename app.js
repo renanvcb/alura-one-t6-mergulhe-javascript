@@ -5,8 +5,8 @@ let palpite;
 let tentativas = 1;
 
 while (palpite != numeroSecreto) {
+  console.log(Math.random());
   palpite = prompt("Entre com um número entre 1 e 10");
-
   if (palpite == numeroSecreto) {
     break;
   } else {
@@ -19,12 +19,7 @@ while (palpite != numeroSecreto) {
   }
 }
 
-if (tentativas > 1) {
-  alert(
-    `Parabéns! Você acertou o número secreto ${numeroSecreto} com ${tentativas} tentativas!`
-  );
-} else {
-  alert(
-    `Que sorte! Você acertou o número secreto ${numeroSecreto} na primeira tentativa!`
-  );
-}
+let palavraTentativa = tentativas > 1 ? "tentativas" : "tentativa";
+alert(
+  `Parabéns! Você acertou o número secreto ${numeroSecreto} com ${tentativas} ${palavraTentativa}!`
+);
